@@ -13,9 +13,13 @@ RM* RM::Instance()
 
 RM::RM()
 {
+	pageManager = PF_Manager::Instance();
 }
 
 RM::~RM()
 {
 }
 
+RC RM::createTable(const string tableName, const vector<Attribute> &attrs){
+
+}

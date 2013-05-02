@@ -125,6 +125,7 @@ protected:
 
 private:
   static RM *_rm;
+  PF_Manager *pageManager;
 };
 
 #endif
