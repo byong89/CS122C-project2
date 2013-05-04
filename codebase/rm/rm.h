@@ -108,6 +108,11 @@ public:
       const vector<string> &attributeNames, // a list of projected attributes
       RM_ScanIterator &rm_ScanIterator);
 
+  //Create a Tables table
+  void createTablesTable();
+
+  //Create Columns table
+  void createColumnsTable();
 
 // Extra credit
 public:

@@ -22,6 +22,7 @@ RM::RM()
 		cout<<"Creating new Catalog file\n";
 		pageManager->CreateFile("catalog.txt");
 		pageManager->OpenFile("catalog.txt", fileHandle);
+		createTablesTable();
 	}
 
 }
@@ -32,5 +33,24 @@ RM::~RM()
 }
 
 RC RM::createTable(const string tableName, const vector<Attribute> &attrs){
+	fileHandle.AppendPage(tableName.data());
+}
+
+void RM::createTablesTable(){
+	RID tablesRecordID;
+	tablesRecordID.pageNum = 0;
+
+	vector<Attribute> v;
+	AttrType type;
+	Attribute attr;
+	attr.name = "tables";
+	attr.length = 48;
+	attr.type = type;
+
+	v.push_back(attr);
+	fileHandle.WritePage(tablesRecordID.pageNum, "tables");
+}
+
+void RM::createColumnsTable(){
 
 }
