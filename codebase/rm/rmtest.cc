@@ -9,7 +9,7 @@ using namespace std;
 
 void rmTest()
 {
-  // RM *rm = RM::Instance();
+   RM *rm = RM::Instance();
 
   // write your own testing cases here
 }

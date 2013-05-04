@@ -126,6 +126,7 @@ protected:
 private:
   static RM *_rm;
   PF_Manager *pageManager;
+  PF_FileHandle fileHandle;
 };
 
 #endif

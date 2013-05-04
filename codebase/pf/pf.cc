@@ -44,7 +44,10 @@ RC PF_Manager::DestroyFile(const char *fileName)
 RC PF_Manager::OpenFile(const char *fileName, PF_FileHandle &fileHandle)
 {
 	FILE* tmp = fopen(fileName, "r+");
-    return fileHandle.setFile(tmp);
+	if(fileHandle.setFile(tmp) == 0 && tmp != NULL){
+		return 0;
+	}
+    return -1;
 }
 
 
