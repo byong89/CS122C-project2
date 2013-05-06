@@ -12,9 +12,11 @@ void rmTest()
    RM *rm = RM::Instance();
 
   // write your own testing cases here
+   vector<Attribute> v;
+   rm->createTable("Hello.txt", v);
 }
 
-int main() 
+int main()
 {
   cout << "test..." << endl;
 

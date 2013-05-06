@@ -45,6 +45,7 @@ RC PF_Manager::OpenFile(const char *fileName, PF_FileHandle &fileHandle)
 {
 	FILE* tmp = fopen(fileName, "r+");
 	if(fileHandle.setFile(tmp) == 0 && tmp != NULL){
+		//fileHandle.closeFile();
 		return 0;
 	}
     return -1;
